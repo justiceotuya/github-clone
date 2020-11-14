@@ -1,0 +1,101 @@
+﻿:root {
+    --color-black-primary: #24292e;
+    --color-black-secondary: #586069;
+    --color-black-tertiary: #444d56;
+    --color-green-primary: #2ea44f;
+    --color-green-secondary: #0366d6;
+    --color-yellow-primary: #f1e05a;
+    --color-white-primary: #fff;
+    --color-white-secondary: #c6c7c8;
+}
+
+/**** UTILITY ****/
+.hidden {
+    display: none
+}
+
+/**** HEADER CSS ****/
+.header {
+    padding: 1.6rem;
+    background-color: var(--color-black-primary);
+    color: var(--color-white-primary);
+    font-size: 1.4rem;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__hamburger,
+.header__notifiction,
+.header__search-jumpto {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(0px);
+}
+
+.header__hamburger:active {
+    opacity:.5;
+    transform: translateY(2px);
+    transition: transform .2s ease-in-out;
+
+}
+
+.header__logo {}
+
+.header__bottom {
+    margin-top: 1.6rem;
+}
+
+
+.header__search {
+    height: 30px;
+    font-weight: 400;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 1.6rem;
+    border: 1px solid var(--color-black-tertiary);
+    border-radius: .6rem;
+    padding: .5rem 1.2rem;
+    outline: none;
+}
+
+.header__search::placeholder {
+    color: var(--color-white-secondary)
+}
+
+.header__search:focus,
+.header__search:active {
+    border-color: var(--color-green-secondary);
+    background-color: var(--color-black-tertiary);
+    caret-color: var(--color-white-primary);
+}
+
+.header__search-jumpto {
+    position: absolute;
+}
+
+.header__links {
+    display: block;
+    border-top: 1px solid var(--color-black-tertiary);
+    padding: .8rem 0;
+}
+
+.header__links a {
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    font-size: 1.4rem;
+    align-items: flex-end;
+}
+
+.header__links span {
+    padding-left: 3px;
+}
