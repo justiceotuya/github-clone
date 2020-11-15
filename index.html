@@ -63,18 +63,18 @@
     </header>
 
     <main class="container">
-    <section class="profile">
-        <div class="profile__user_details_wrapper">
-            <img src="./assets/images/user.jpeg" alt="user" class="profile__image">
-            <div class="profile__name_wrapper">
-                <h1 class="profile__name">Justice Otuya</h1>
-                <p class="profile__username">justiceotuya</p>
+        <section class="profile">
+            <div class="profile__user_details_wrapper">
+                <img src="./assets/images/user.jpeg" alt="user" class="profile__image">
+                <div class="profile__name_wrapper">
+                    <h1 class="profile__name">Justice Otuya</h1>
+                    <p class="profile__username">justiceotuya</p>
+                </div>
             </div>
-        </div>
-        <button class="profile__set_status">
-            <!-- <img src="./assets/images/happy.svg" alt="set status"> -->
-            <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16"
-            height="16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
+            <button class="profile__set_status">
+                <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
             1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0
             000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0
             011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0
@@ -83,92 +83,416 @@
             1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946
             0-1.652-.308-2.126-.63a3.32 3.32 0
             01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75
-            0 01.183-1.044h.001z"></path></svg>
+            0 01.183-1.044h.001z"></path>
+                </svg>
 
-            Set status
-        </button>
-        <p class="profile__link">https://justiceotuya.github.io</p>
-        <button class="profile__edit_profile">
-            Edit profile
-        </button>
+                Set status
+            </button>
+            <p class="profile__link">https://justiceotuya.github.io</p>
+            <button class="profile__edit_profile">
+                Edit profile
+            </button>
 
-        <div class="profile__contact_wrapper">
-            <ul class="profile__contact">
-                <li>
-                    <img src="./assets/images/mail.svg" alt="user's email">
-                    <a href="mailto:jotuya2@gmail.com">jotuya2@gmail.com</a>
-                </li>
-                <li>
-                    <img src="./assets/images/link.svg" alt="user's email">
-                    <a href="http://justiceotuya.github.io">https://justiceotuya.github.io</a>
-                </li>
-            </ul>
+            <div class="profile__contact_wrapper">
+                <ul class="profile__contact">
+                    <li>
+                        <img src="./assets/images/mail.svg" alt="user's email">
+                        <a href="mailto:jotuya2@gmail.com">jotuya2@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="./assets/images/link.svg" alt="user's email">
+                        <a href="http://justiceotuya.github.io">https://justiceotuya.github.io</a>
+                    </li>
+                </ul>
 
-            <div class="profile__social_count">
-                <a href="#" class="profile__social_link">
-                    <img src="./assets/images/people.svg" alt="followers" >
-                    <span class="profile__number">20</span> followers
-                </a>
-                <span class="profile__social_dot_seperator">.</span>
-                <a href="#" class="profile__social_link">
-                    <span class="profile__number">51</span> followers
-                </a>
-                <span class="profile__social_dot_seperator">.</span>
-                <a href="#" class="profile__social_link">
-                    <img src="./assets/images/star.svg" alt="Like" >
-                    <span class="profile__number">27</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <nav class="projects__navigation_tabs">
-            <ul class="project__navigation_items_wrapper">
-                <li class="project__navigation_item">
-                    <a href="#">Overview</a>
-                </li>
-                <li class="project__navigation_item project__navigation_item--active">
-                    <a href="#">Repositories <span
-                class="projects__repo_count">76</span>
-            </a>
-            </li>
-                <li class="project__navigation_item">
-                    <a href="#">Projects</a>
-                </li>
-                <li class="project__navigation_item">
-                    <a href="#">Packages</a>
-                </li>
-            </ul>
-        </nav>
-
-        <section class="project__navigation_page">
-            <div class="project__repo_filter_wrapper">
-                <input type="text" class="profile__search_repo"
-                placeholder="Find a repository...">
-                <div class="project__repo_filter_controls">
-                    <div class="project__filter_repo_type_wrapper">
-                        <button class="project__filter_button project__filter_button--repo_type">
-                            <span class="project__filter_button_title">Type:</span> <span data-menu="">All</span>
-                            <span id="caret"></span>
-                        </button>
-                        <button class="project__filter_button project__filter_button--repo_language">
-                            <span class="project__filter_button_title"> Language</span>: <span data-menu="">All</span>
-                            <span id="caret"></span>
-                        </button>
-                    </div>
-
-                    <button class="project__filter_button project__filter_button--create_repo">
-                       <img src="assets/images/repo.svg"> New
-                    </button>
+                <div class="profile__social_count">
+                    <a href="#" class="profile__social_link">
+                        <img src="./assets/images/people.svg" alt="followers">
+                        <span class="profile__number">20</span> followers
+                    </a>
+                    <span class="profile__social_dot_seperator">.</span>
+                    <a href="#" class="profile__social_link">
+                        <span class="profile__number">51</span> followers
+                    </a>
+                    <span class="profile__social_dot_seperator">.</span>
+                    <a href="#" class="profile__social_link">
+                        <img src="./assets/images/star.svg" alt="Like">
+                        <span class="profile__number">27</span>
+                    </a>
                 </div>
             </div>
-            <div>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quis alias ex similique saepe magni explicabo odio molestias consequuntur, nam doloribus hic, dolorem eveniet dolores maxime cumque reprehenderit soluta. Atque ipsam ea nulla ad ipsum cupiditate, fuga animi maxime ex molestias voluptate excepturi ipsa saepe dolorem repudiandae recusandae obcaecati similique, nobis eum nemo neque? Nobis facere nam ratione autem voluptatibus explicabo, nisi voluptatem laboriosam dolor maiores nostrum fugiat quisquam, quo aliquam earum. Laboriosam dolorem blanditiis sit harum delectus eligendi quis qui animi nesciunt corrupti maiores sequi commodi rerum excepturi ratione, natus, exercitationem, dolores obcaecati! Laboriosam inventore modi laborum libero quasi autem repudiandae nisi perspiciatis magni eligendi quas porro aut, illum nemo recusandae maiores dolores? Vitae explicabo ducimus praesentium sapiente voluptates non unde quibusdam, deleniti, tempora corporis at voluptate perferendis, ea est maiores repellendus? Nesciunt, molestias. Autem dolor unde voluptatem labore nobis incidunt distinctio exercitationem cum nihil, sit blanditiis esse sed inventore non eius mollitia a aperiam fuga est consequuntur illum possimus. Quasi deleniti eligendi voluptatem blanditiis ratione possimus nulla unde sequi a, iure ullam officia explicabo assumenda. Voluptate fuga nostrum, velit illum asperiores ex excepturi dignissimos doloribus? Labore, atque optio consequatur aliquid numquam, fuga quasi quam fugiat non sunt impedit totam est ea officiis similique eius? Eaque sequi animi sapiente pariatur id debitis earum repellat nulla vero aliquid, dignissimos cupiditate fugiat numquam non quis ipsa nobis! Fugiat odit error quibusdam facere earum sequi beatae itaque quidem similique delectus perspiciatis, fuga voluptate accusamus atque aut corrupti qui iure veniam numquam repellat non expedita. Corrupti inventore, numquam asperiores iure quis saepe odit, nihil, suscipit obcaecati repellendus alias neque iusto? Dolore vero maiores delectus inventore quo! Delectus, laudantium voluptates sequi quibusdam aliquam nulla molestias hic provident numquam nobis praesentium dolorum, saepe dolorem eligendi. Libero mollitia voluptas blanditiis beatae sed velit alias ipsa magni unde laborum ratione culpa iste harum eligendi quo animi, tenetur necessitatibus vero placeat veniam doloremque accusantium quas! Eum natus doloremque dolores cumque, modi omnis sunt cupiditate hic similique accusamus eos! Repellat tenetur porro sed maiores consequatur animi cum pariatur. Ipsum veniam ducimus reiciendis velit voluptatem eos, maiores quia corporis iusto ipsa minima perferendis et, inventore adipisci ullam vero minus repellat. Similique ullam mollitia blanditiis quo consequatur est corrupti culpa, quibusdam voluptatibus facilis omnis saepe, impedit fugiat facere dicta iste enim asperiores eligendi doloremque in, dolore soluta ad. Dignissimos laborum inventore accusamus ratione dolorem, natus est possimus nobis repellendus tempora eos blanditiis, reiciendis nulla ad corrupti reprehenderit architecto modi numquam suscipit esse fugit voluptatum quis sapiente cumque? At hic minus quam magni minima animi voluptatibus, dolorum numquam voluptate, quidem eveniet ut soluta tempore, repellat rem consequatur voluptates! Aperiam quaerat blanditiis veritatis eius, nemo laborum illo ratione quam tempore, harum consectetur sequi incidunt molestias at. Dolorem non quas deleniti quidem voluptatem, impedit labore harum, nisi quod suscipit voluptates veniam dolor placeat quam odit adipisci expedita fugit omnis ducimus nihil. Ratione placeat tenetur, deserunt quo repellat iure molestias et necessitatibus autem vitae eius voluptates sint! Ut voluptatibus asperiores nostrum enim accusamus suscipit est dignissimos, quasi sed natus non facilis beatae mollitia voluptates modi fugiat architecto excepturi nisi. Voluptatem facere maiores repudiandae voluptate esse aliquam tenetur minus officia modi voluptatum laboriosam est a expedita accusantium corrupti, voluptatibus, enim debitis dicta, ullam pariatur! Laborum fuga ea accusantium perferendis praesentium modi explicabo, excepturi vitae odio dolorum nisi, assumenda veritatis impedit et mollitia perspiciatis. Id ullam repudiandae cumque facere, voluptas mollitia laudantium animi nulla? Ab obcaecati ipsa autem quam expedita nobis fuga iste non ipsum enim, modi quibusdam aspernatur nostrum corporis alias at repudiandae odio totam doloremque consequuntur blanditiis! Veritatis reiciendis ad consectetur ratione atque, alias eos quod! Esse placeat quisquam odit? Enim voluptatum repellat quo voluptates vero atque reiciendis et, ducimus magnam autem odit, alias id recusandae. Quam, consectetur doloribus ab libero ipsam labore quidem vero a dolores natus quaerat repudiandae nihil fuga tempore vitae molestias consequatur atque. Earum necessitatibus voluptate nemo temporibus consequatur perferendis provident quia iusto laudantium accusantium sed sequi impedit molestiae magnam culpa tempora labore, assumenda nisi. Vero quos nobis explicabo facere natus at vitae itaque? Repellendus, quae est officiis placeat asperiores laudantium nesciunt, ut amet dicta accusamus voluptatum deserunt consectetur fuga minus assumenda ad soluta facilis laborum! Unde ut et provident animi, assumenda eligendi modi fugit maxime labore ullam culpa facilis quibusdam, totam atque ad ex minus inventore eius! Repellat deserunt ut fuga provident velit mollitia quas deleniti laudantium. Aperiam quisquam, repellendus sint beatae esse at ipsum amet. Tempora animi non incidunt temporibus quae, ipsum eum cupiditate ipsam soluta facere laudantium! Doloremque excepturi soluta non explicabo voluptatibus. Repudiandae voluptate, in iure tempore sapiente consectetur vero rerum saepe ut eaque ullam labore hic eveniet enim sequi rem mollitia nihil dolore veritatis beatae ad, animi quas. Iusto delectus fugit amet fugiat perferendis nesciunt porro error numquam nobis perspiciatis ipsum temporibus facere laudantium aperiam ratione quidem doloremque a alias quae possimus, magni blanditiis officia saepe. Dolores quidem vitae non velit temporibus officia officiis aspernatur. Natus neque doloribus aperiam ipsa reiciendis rerum dolorem vel voluptatibus tenetur explicabo, dolor perferendis rem, incidunt porro tempore quaerat quam? Tempore ipsam dolor possimus a corrupti rem sapiente ad omnis similique molestias sed est reiciendis consequuntur quod accusantium fugiat totam magnam voluptatibus expedita, cum ratione tenetur animi fugit distinctio! Fuga facilis quas dolorum quae. Numquam, illum odit iusto in eius explicabo porro hic accusamus, vitae beatae quibusdam incidunt recusandae saepe totam sint placeat eum assumenda ex iure velit, deserunt dolore fuga a voluptatum. Totam, voluptas! Vero enim harum ipsum aliquam. Maiores odit facere provident corporis blanditiis cumque ipsam, ipsum repudiandae voluptatibus, nostrum minima esse distinctio delectus? Reiciendis dignissimos unde modi? Incidunt maxime consequatur est laboriosam. Illum explicabo culpa amet molestias nisi ut soluta nam libero odio dolores laborum corporis, neque repellat reiciendis excepturi sequi, cumque similique obcaecati ad molestiae asperiores sit? Animi ducimus nobis illo, ea deserunt nihil beatae? Repellat amet provident molestias a optio ipsam similique facilis saepe incidunt magni accusamus eos ea quos voluptas aut, autem doloremque molestiae error officia maiores. Sed, eius? Aliquam cupiditate eaque quae quisquam ut sit rem reiciendis ab soluta ratione ipsam fuga, illo modi nulla quos laborum iusto debitis repellat dolores error quidem, animi non, fugit assumenda? Ad et sed rem assumenda laudantium! Mollitia quod, sed labore omnis deserunt atque repudiandae suscipit doloribus beatae accusamus exercitationem facilis iusto sit possimus officiis nam in sint error repellendus. Quidem consectetur hic officia eaque facilis soluta vel fugiat possimus quibusdam! Placeat odio quaerat ipsum officiis asperiores labore sapiente, fuga blanditiis facere voluptatum incidunt magni ullam tenetur iste rem eos totam maxime est. Exercitationem reiciendis blanditiis ducimus asperiores ullam atque quia maxime, minima culpa eligendi earum debitis tempora dolorum quasi quis deserunt laboriosam delectus nostrum voluptatum unde dolores? Repellat fugiat aliquid facilis ipsam neque pariatur possimus itaque tempore, ducimus odit nulla, omnis esse corporis. Quibusdam repellendus voluptatibus quisquam consectetur, voluptates ea sit nisi necessitatibus velit minima possimus soluta quos officiis libero placeat, ab molestiae dolor sapiente impedit, est beatae aliquid consequatur quia. Iste quidem omnis voluptatum dignissimos aspernatur tempore explicabo, accusantium voluptatibus commodi, eaque ab iusto alias animi ut, odit doloremque. Dicta culpa doloremque minus dolor aliquid molestiae maiores praesentium possimus neque, consectetur pariatur eveniet dolores sed perspiciatis enim blanditiis, illo veritatis? Nemo praesentium aperiam, illo aliquam ex itaque, cumque esse nisi, ab repellat molestiae! Laudantium repellat corrupti neque cupiditate itaque vel rerum excepturi distinctio libero voluptatibus iure accusantium dignissimos possimus, necessitatibus suscipit animi dolorum assumenda eligendi. At, numquam eaque, tenetur culpa debitis reprehenderit asperiores ab optio quos labore saepe? Animi excepturi, quod eos voluptatum minus magnam enim iste eveniet veritatis eum numquam quos natus tempore pariatur placeat expedita, facere at totam deserunt optio, debitis harum asperiores! Delectus eum hic, animi ullam ipsam architecto quasi neque necessitatibus nesciunt asperiores. Quaerat minima veniam et vitae perferendis unde, quis ratione molestiae beatae, a mollitia, obcaecati sequi veritatis quod placeat quisquam aliquam officia ea voluptatibus perspiciatis quos voluptatum. Est numquam provident ab. Ullam totam possimus inventore laudantium vel voluptates reiciendis a, accusamus animi veniam dolorum fuga repellendus quae minima vero saepe eveniet tempore, tenetur amet omnis. Quibusdam sequi voluptatem quas repellendus. Harum voluptatibus temporibus itaque, modi pariatur, totam fuga perferendis voluptas architecto ut ducimus eaque quos, eos et quod mollitia natus. Provident illo, vel, ex sequi soluta repellendus nemo minus ratione eveniet sit est. Alias nulla tempora earum eaque, iure aliquam, velit minima deleniti ipsum cumque consectetur? Dolorem perspiciatis, distinctio in ex molestias illum dicta sit enim sequi ut eaque quia repellat dolorum nihil magni eos possimus adipisci hic laboriosam inventore ab nulla! Recusandae ipsam odit, assumenda illo commodi reprehenderit in consequuntur numquam est quo amet repellendus at accusantium. Natus, reiciendis, corporis veritatis recusandae facilis fugiat illo placeat dolorum asperiores vitae nam ad tenetur labore consequuntur consectetur sint ab aliquid quis voluptate. Doloribus aliquam molestiae alias perferendis autem possimus vitae, nisi quo nulla error laboriosam placeat quibusdam dolores, odit eius illum cum laborum molestias cupiditate. Corrupti, impedit doloribus neque accusamus quaerat cum reprehenderit obcaecati quos repellat enim numquam quod odio aut consectetur inventore ratione, sapiente similique saepe odit tenetur? Fugiat quos tempora cumque rem repellendus eligendi blanditiis dignissimos repellat doloribus labore, ratione, consequuntur ipsam? Hic libero unde ab asperiores molestiae inventore facere? Sequi alias, soluta cupiditate dolorem nisi accusamus praesentium ipsam eveniet numquam fugit recusandae itaque repudiandae tenetur in suscipit, animi consectetur dignissimos? Quasi in ad saepe libero! Voluptatem quo libero cum quas similique consequuntur doloremque quibusdam delectus, eius laborum est voluptate expedita voluptates corrupti dicta natus modi hic odit maxime quasi earum vel? Illum repellendus labore fugit vero recusandae dolore perferendis accusamus, facere cum facilis tempore veritatis ipsa quas, blanditiis odit consequuntur voluptas voluptates incidunt, enim eos nam voluptatem. Consequuntur cupiditate, rerum temporibus quasi natus voluptatum sed libero animi! Beatae dolores, laborum rem odit quod commodi. Temporibus cum voluptatum porro amet. Dolorem, ipsum delectus ad nesciunt aut nihil, error laboriosam sint assumenda amet perferendis, quas in nulla distinctio consequuntur. Doloremque, aut architecto? Iure sapiente fuga perspiciatis alias eos natus placeat, voluptatem unde voluptates exercitationem id aut officia deserunt reprehenderit! Officiis explicabo id voluptate suscipit voluptates non aut sed delectus amet dolore architecto deserunt illo, hic at. Perspiciatis temporibus a minus similique incidunt, asperiores ipsa eos ut mollitia quidem tenetur consectetur quia molestias officiis magni voluptatum itaque enim, architecto porro! Quod quidem veniam iure. Obcaecati expedita quibusdam ullam debitis ipsa! Tenetur in fugit soluta veniam, perspiciatis quis inventore voluptatibus itaque! Harum accusantium nesciunt labore repellat iste. Quo sunt quasi fugit tempore eaque impedit cupiditate recusandae iusto in repellat, cumque deserunt, eum laudantium. Commodi dolorum expedita accusantium odit dolor repellendus. Libero perspiciatis voluptatem similique sequi delectus eveniet, a neque ullam velit officia. Sit vitae exercitationem suscipit nulla in repellendus iure cumque architecto quia nesciunt eum facere laudantium harum a at autem, temporibus maxime sequi! Quos corporis magni facilis amet sed minus doloribus repellendus architecto? Excepturi perspiciatis veniam illum, aut voluptatibus fugit dolores velit provident, ipsam alias sit deserunt corrupti sequi assumenda debitis! Voluptatem soluta odio animi eos hic a saepe voluptate, ipsa non. Modi alias dignissimos a ullam, rerum velit necessitatibus mollitia voluptatum id, cupiditate, veniam dolores consectetur aut minus error ut eaque natus sint tenetur incidunt dolorem. Iusto aut itaque nobis, quibusdam accusamus saepe? Perspiciatis maxime architecto exercitationem voluptatem, odit sapiente accusantium adipisci animi. Eius sed quas atque nemo unde. Repellat harum aliquam ipsum odit nostrum sunt officia architecto voluptates nam itaque consequuntur enim eius explicabo ducimus, officiis accusamus dolor magnam sapiente eum qui. Provident, dolores. Porro distinctio voluptates, molestias enim, alias, similique perferendis accusamus dolorum harum tempore repellendus nihil natus hic architecto consequatur odit beatae eligendi nam soluta sunt? Vitae, neque odit qui fuga reiciendis velit quis quisquam ab aliquid praesentium aut officiis dolore illo obcaecati quibusdam sint quo odio inventore autem dolores amet eos. Culpa quaerat ut, perferendis velit ducimus iste laudantium et soluta, similique ex minima, ullam dolorem aspernatur voluptatem consectetur officia maiores dolorum? Quas quisquam molestias repellat illum totam reiciendis veniam qui, tempore voluptate iusto fugit, aspernatur dolore, provident a earum quasi amet pariatur error odio sunt. Vero nam similique ab nostrum necessitatibus illum impedit cum ipsa omnis sunt voluptates ipsam illo aliquid magni facilis eligendi placeat, nemo iure? Ea nulla labore quibusdam quaerat explicabo eius delectus? Quidem ipsum eveniet asperiores dolor porro sunt delectus debitis dolorum fuga, sint nam totam qui, commodi, vitae nesciunt! Animi recusandae, sunt assumenda debitis ut eum illum quos explicabo vel labore magnam voluptatum praesentium aspernatur, eaque id optio impedit dolorum veniam modi earum maxime nulla. Consequuntur repudiandae quibusdam, consequatur vitae nisi alias accusamus error molestiae commodi reiciendis voluptatem repellat rerum, in laborum. Libero iure deserunt accusantium vero perspiciatis explicabo. Numquam veritatis error ab laborum, excepturi cupiditate tempora beatae tenetur qui obcaecati quae repellendus maiores quam dolorem, voluptatum sapiente perspiciatis dolorum totam quos repellat veniam a inventore! Vero facilis harum itaque, natus dolore nobis id deleniti eum? Perspiciatis iure, atque, nemo unde sapiente repudiandae facilis, aut voluptates at amet assumenda incidunt ad aliquid! Adipisci nostrum enim earum odio nemo illo ipsam reiciendis nihil quaerat, hic aut nam quasi veniam vel consequatur voluptatum cum est porro at voluptatem minima totam? Dolore animi sapiente adipisci asperiores tempore placeat molestias possimus cupiditate laboriosam illum temporibus harum totam ducimus id, cumque voluptatum, eaque perferendis similique magni consectetur? Provident, a! Reiciendis velit voluptatibus hic nihil corrupti ea, tempore labore, repellat rerum fugit perferendis possimus aut delectus quisquam ipsa deserunt blanditiis dolorum recusandae aspernatur cum et. Numquam aliquid iure, similique nulla hic quas, assumenda temporibus quos culpa placeat, id amet soluta accusantium pariatur repellat? Tempora magnam, laudantium, molestias beatae expedita hic minus fuga necessitatibus nulla optio libero excepturi error! Tenetur repellat rem earum eum magni fugiat error beatae provident, culpa amet ex tempore omnis magnam illo quasi id repellendus fuga voluptates officia adipisci minima? Culpa soluta, et sunt aut in quidem vitae deserunt quis modi inventore reiciendis veritatis dolorem minus sed. Eum libero iure modi non unde, dignissimos aspernatur voluptatibus veritatis porro obcaecati eos fugiat blanditiis temporibus sequi officia aut at soluta explicabo numquam dicta ipsum doloremque omnis. Nulla voluptas debitis laboriosam fugiat obcaecati itaque consectetur aut deleniti temporibus! Dicta laudantium eius, consequatur vero aliquam voluptatem obcaecati quis error hic quod repellendus inventore sit, tempora architecto necessitatibus exercitationem commodi, iure dolor fugiat non tenetur eum distinctio. Inventore veritatis praesentium perferendis reiciendis expedita minima quisquam obcaecati alias nisi voluptate ad quis enim quaerat error blanditiis consequatur, rem molestias, molestiae ratione! Laboriosam molestias soluta ratione esse asperiores? Delectus laborum voluptatum repellat aliquam illum dolorum optio. Porro, cum, non hic suscipit rem impedit nihil, nam similique dolore maxime exercitationem labore laudantium aut! Pariatur excepturi nobis odit ipsum. Voluptatum aliquam reiciendis nihil inventore temporibus mollitia optio officiis modi dolores sit dicta, repudiandae quis eveniet distinctio vel, ipsam at alias, eos nam voluptatem placeat enim non? Accusantium voluptates officiis pariatur in doloremque ad, ab quo. Pariatur, recusandae dolorem impedit exercitationem, magnam iusto, eaque fugit ipsum fugiat corporis eligendi ipsam porro culpa! Hic beatae molestiae facilis enim, alias ab architecto asperiores adipisci corrupti porro aliquid fugiat recusandae fuga tempore expedita at culpa aperiam doloremque? Ex, iure. Corporis saepe tempora dolorum dolore explicabo provident? Deleniti rem consectetur voluptas quibusdam, delectus id aspernatur est quisquam dolorum autem tenetur aperiam, illo ipsum accusantium dolor tempore totam asperiores! Voluptatem sint repellat soluta, necessitatibus quia sunt, eaque sit tempora ex esse laudantium, magni aut quibusdam ad adipisci! Nulla quas nam corporis, magnam quibusdam optio. Minus animi dolor explicabo iure ipsum esse rerum debitis quibusdam in, enim, adipisci natus consectetur sequi officiis quam dolorum numquam alias corrupti sunt ducimus ipsa similique! Sequi mollitia magni itaque libero fuga, odit illo molestias explicabo dolorum quo, ex similique aut officia id ratione blanditiis adipisci amet. Atque dicta, deserunt autem vero inventore, unde laborum eum sequi voluptas tenetur aspernatur? Doloremque non asperiores eius, dolorem sit repudiandae sint, eaque tenetur facilis commodi aut saepe exercitationem cumque explicabo veniam vero a veritatis. Id ratione, dolores explicabo corrupti porro beatae ipsum sequi libero? Nihil mollitia vero labore totam minus magni. Ipsam consequuntur nobis esse quo mollitia nihil natus cumque ex itaque dolorum impedit corrupti inventore exercitationem, quam, laboriosam voluptates, corporis architecto. Quidem delectus aliquid neque alias molestias minima? Ratione aperiam expedita laudantium animi consequatur fugit eveniet quo, cum error ipsum. Minus quibusdam commodi ipsa consectetur? Doloremque suscipit quas non inventore, error nisi iusto earum hic quod aspernatur ullam minima debitis quasi eaque nihil fugiat fuga, voluptates sunt ad! Optio ullam voluptatibus vero a, odio corrupti explicabo exercitationem possimus nam quas! Nemo fuga vel consectetur eveniet possimus deserunt accusamus ex alias, cum quaerat porro dolor eum magni provident quos minus non odio? Laboriosam dolorem minima praesentium repudiandae error quisquam saepe eum ipsum? Libero, repellendus nulla enim eaque optio asperiores soluta, ratione accusamus est a, totam consequuntur quibusdam exercitationem dolorum nihil quaerat suscipit sunt natus magni! Vel dolorem at possimus laboriosam expedita, nobis nulla voluptates pariatur quo! Error molestias magni eius, sequi ratione culpa tenetur quisquam expedita voluptas eum ipsum ipsam voluptatem nobis ex. Beatae aperiam vel libero nemo ullam tenetur, mollitia maxime! Ab debitis laborum iste accusantium voluptatum enim optio numquam ipsa! Perferendis nulla id cumque alias! Deleniti, quasi. Quisquam consequatur cumque voluptate sequi necessitatibus similique dolores molestias? Quaerat, ipsam repudiandae perferendis officia laborum veritatis soluta sunt commodi eaque vero nisi earum, illo rem voluptate aliquam accusamus quos unde ea optio? Sequi enim obcaecati laboriosam accusantium quam, aut pariatur eos? Ullam inventore, aut fugit quas magnam consequuntur vitae, aspernatur veritatis harum maxime soluta eligendi facilis voluptatibus dignissimos ipsum necessitatibus nemo aperiam ut numquam dolorum repellat dolores? Illum sunt libero excepturi cum, facilis eaque delectus, rem, nobis deserunt porro tempore ratione distinctio dolores corporis obcaecati repellendus. Impedit, deserunt voluptates reiciendis corporis rem eligendi tenetur facere, nisi, possimus fugit reprehenderit at molestiae sint esse quidem iusto rerum. Excepturi laudantium deleniti pariatur aliquam. Voluptatibus odit ut atque facere a quibusdam, aperiam officiis ratione quia sapiente exercitationem saepe, nisi quis, nemo velit nesciunt? Autem, atque. Reprehenderit, eaque cumque autem est officiis consectetur esse provident eligendi fuga aliquam quisquam, dicta, iste aperiam debitis. Magnam, adipisci. Aliquid itaque dolorum tempore rerum mollitia sit neque, temporibus beatae odit nam magni optio porro libero reiciendis nobis.
-            </div>
         </section>
-    </section>
-</main>
+
+        <section class="projects">
+            <nav class="projects__navigation_tabs">
+                <ul class="project__navigation_items_wrapper">
+                    <li class="project__navigation_item">
+                        <a href="#">Overview</a>
+                    </li>
+                    <li class="project__navigation_item project__navigation_item--active">
+                        <a href="#">Repositories <span class="projects__repo_count">76</span>
+                        </a>
+                    </li>
+                    <li class="project__navigation_item">
+                        <a href="#">Projects</a>
+                    </li>
+                    <li class="project__navigation_item">
+                        <a href="#">Packages</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="project__navigation_page">
+                <div class="project__repo_filter_wrapper">
+                    <input type="text" class="profile__search_repo" placeholder="Find a repository...">
+                    <div class="project__repo_filter_controls">
+                        <div class="project__filter_repo_type_wrapper">
+                            <button class="project__filter_button project__filter_button--repo_type">
+                                <span class="project__filter_button_title">Type:</span> <span data-menu="">All</span>
+                                <span id="caret"></span>
+                            </button>
+                            <button class="project__filter_button project__filter_button--repo_language">
+                                <span class="project__filter_button_title"> Language</span>: <span
+                                    data-menu="">All</span>
+                                <span id="caret"></span>
+                            </button>
+                        </div>
+
+                        <button class="project__filter_button project__filter_button--create_repo">
+                            <img src="assets/images/repo.svg"> New
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project__repo_list_wrapper">
+                    <ul class="project__repo_list">
+                        <li class="project__repo">
+                            <div class="project__repo_info">
+                                <h2>
+                                    <a href="#" class="project__repo_name">
+                                        input-form
+                                    </a>
+                                </h2>
+                                <p class="project__repo_forked_details">
+                                    Forked from <a
+                                    class="project__repo_forked_link"
+                                    href="#"> mykeels/spectranet-cli</a>
+                                </p>
+
+                                <p class="project__repo_description">
+                                    List of functions which you can use to replace moment.js + ESLint Plugin
+                                </p>
+
+                                <div class="project__repo_meta">
+                                    <span class="project__repo_language">
+                                        <span class="project_repo_language_color"></span>
+                                        <p class="project_repo_language_name">JavaScript</p>
+                                    </span>
+
+                                    <span class="project__repo_forked">
+                                        <img src="./assets/images/fork.svg" alt="number of times forked">
+                                        <p class="project__repo_forked_number">
+                                            265
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_license">
+                                        <img src="./assets/images/law.svg" alt="number of times forked">
+                                        <p class="project__repo_license_number">
+                                            MIT License
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_updated">
+                                        Updated on <span
+                                        class="project__repo_updated_date"> Apr
+                                            28</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <button class="project__repo_star_btn">
+                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
+                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
+01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
+4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
+01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
+01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
+01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
+2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
+01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
+2.694v.001z"></path>
+                                </svg>
+                                <span class="project__repo_star_btn_text"> Star</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul class="project__repo_list">
+                        <li class="project__repo">
+                            <div class="project__repo_info">
+                                <h2>
+                                    <a href="#" class="project__repo_name">
+                                        input-form
+                                    </a>
+                                </h2>
+                                <p class="project__repo_forked_details">
+                                    Forked from <a
+                                    class="project__repo_forked_link"
+                                    href="#"> mykeels/spectranet-cli</a>
+                                </p>
+
+                                <p class="project__repo_description">
+                                    List of functions which you can use to replace moment.js + ESLint Plugin
+                                </p>
+
+                                <div class="project__repo_meta">
+                                    <span class="project__repo_language">
+                                        <span class="project_repo_language_color"></span>
+                                        <p class="project_repo_language_name">JavaScript</p>
+                                    </span>
+
+                                    <span class="project__repo_forked">
+                                        <img src="./assets/images/fork.svg" alt="number of times forked">
+                                        <p class="project__repo_forked_number">
+                                            265
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_license">
+                                        <img src="./assets/images/law.svg" alt="number of times forked">
+                                        <p class="project__repo_license_number">
+                                            MIT License
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_updated">
+                                        Updated on <span
+                                        class="project__repo_updated_date"> Apr
+                                            28</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <button class="project__repo_star_btn">
+                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
+                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
+01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
+4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
+01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
+01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
+01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
+2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
+01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
+2.694v.001z"></path>
+                                </svg>
+                                <span class="project__repo_star_btn_text"> Star</span>
+                            </button>
+                        </li>
+                    </ul>
+
+
+                    <ul class="project__repo_list">
+                        <li class="project__repo">
+                            <div class="project__repo_info">
+                                <h2>
+                                    <a href="#" class="project__repo_name">
+                                        input-form
+                                    </a>
+                                </h2>
+                                <p class="project__repo_forked_details">
+                                    Forked from <a
+                                    class="project__repo_forked_link"
+                                    href="#"> mykeels/spectranet-cli</a>
+                                </p>
+
+                                <p class="project__repo_description">
+                                    List of functions which you can use to replace moment.js + ESLint Plugin
+                                </p>
+
+                                <div class="project__repo_meta">
+                                    <span class="project__repo_language">
+                                        <span class="project_repo_language_color"></span>
+                                        <p class="project_repo_language_name">JavaScript</p>
+                                    </span>
+
+                                    <span class="project__repo_forked">
+                                        <img src="./assets/images/fork.svg" alt="number of times forked">
+                                        <p class="project__repo_forked_number">
+                                            265
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_license">
+                                        <img src="./assets/images/law.svg" alt="number of times forked">
+                                        <p class="project__repo_license_number">
+                                            MIT License
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_updated">
+                                        Updated on <span
+                                        class="project__repo_updated_date"> Apr
+                                            28</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <button class="project__repo_star_btn">
+                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
+                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
+01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
+4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
+01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
+01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
+01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
+2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
+01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
+2.694v.001z"></path>
+                                </svg>
+                                <span class="project__repo_star_btn_text"> Star</span>
+                            </button>
+                        </li>
+                    </ul>
+
+
+                    <ul class="project__repo_list">
+                        <li class="project__repo">
+                            <div class="project__repo_info">
+                                <h2>
+                                    <a href="#" class="project__repo_name">
+                                        input-form
+                                    </a>
+                                </h2>
+                                <p class="project__repo_forked_details">
+                                    Forked from <a
+                                    class="project__repo_forked_link"
+                                    href="#"> mykeels/spectranet-cli</a>
+                                </p>
+
+                                <p class="project__repo_description">
+                                    List of functions which you can use to replace moment.js + ESLint Plugin
+                                </p>
+
+                                <div class="project__repo_meta">
+                                    <span class="project__repo_language">
+                                        <span class="project_repo_language_color"></span>
+                                        <p class="project_repo_language_name">JavaScript</p>
+                                    </span>
+
+                                    <span class="project__repo_forked">
+                                        <img src="./assets/images/fork.svg" alt="number of times forked">
+                                        <p class="project__repo_forked_number">
+                                            265
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_license">
+                                        <img src="./assets/images/law.svg" alt="number of times forked">
+                                        <p class="project__repo_license_number">
+                                            MIT License
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_updated">
+                                        Updated on <span
+                                        class="project__repo_updated_date"> Apr
+                                            28</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <button class="project__repo_star_btn">
+                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
+                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
+01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
+4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
+01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
+01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
+01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
+2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
+01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
+2.694v.001z"></path>
+                                </svg>
+                                <span class="project__repo_star_btn_text"> Star</span>
+                            </button>
+                        </li>
+                    </ul>
+
+
+                    <ul class="project__repo_list">
+                        <li class="project__repo">
+                            <div class="project__repo_info">
+                                <h2>
+                                    <a href="#" class="project__repo_name">
+                                        input-form
+                                    </a>
+                                </h2>
+                                <p class="project__repo_forked_details">
+                                    Forked from <a
+                                    class="project__repo_forked_link"
+                                    href="#"> mykeels/spectranet-cli</a>
+                                </p>
+
+                                <p class="project__repo_description">
+                                    List of functions which you can use to replace moment.js + ESLint Plugin
+                                </p>
+
+                                <div class="project__repo_meta">
+                                    <span class="project__repo_language">
+                                        <span class="project_repo_language_color"></span>
+                                        <p class="project_repo_language_name">JavaScript</p>
+                                    </span>
+
+                                    <span class="project__repo_forked">
+                                        <img src="./assets/images/fork.svg" alt="number of times forked">
+                                        <p class="project__repo_forked_number">
+                                            265
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_license">
+                                        <img src="./assets/images/law.svg" alt="number of times forked">
+                                        <p class="project__repo_license_number">
+                                            MIT License
+                                        </p>
+                                    </span>
+
+                                    <span class="project__repo_updated">
+                                        Updated on <span
+                                        class="project__repo_updated_date"> Apr
+                                            28</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <button class="project__repo_star_btn">
+                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
+                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
+01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
+4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
+01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
+01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
+01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
+2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
+01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
+2.694v.001z"></path>
+                                </svg>
+                                <span class="project__repo_star_btn_text"> Star</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+        </section>
+    </main>
     <script src="./index.js"></script>
 </body>
 
