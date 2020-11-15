@@ -15,6 +15,28 @@
     display: none
 }
 
+#caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-right: 4px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 4px solid transparent;
+    margin-left: 4px;
+    opacity: .8;
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+.container {
+    padding: 0 16px;
+}
+
 /**** HEADER CSS ****/
 .header {
     padding: 1.6rem;
@@ -109,7 +131,8 @@
 
 /***PROFILE***/
 .profile{
-    padding: 0.5rem 1.6rem;
+    padding: 0.5rem 0;
+    margin-bottom: 24px;
 }
 .profile__user_details_wrapper{
 display: flex;
@@ -136,7 +159,8 @@ color: var(--color-black-secondary);
 line-height: 12px;
 }
 .profile__set_status,
-.profile__edit_profile{
+.profile__edit_profile,
+.profile__search_repo{
 width:100%;
 padding: .75rem .8rem;
 display: flex;
@@ -216,4 +240,101 @@ font-weight: 600;
 padding: 0 .3em;
 position: relative;
     top: -3px;
+}
+
+/***PROJECT SECTION***/
+.projects {
+
+}
+.projects__navigation_tabs {
+    width: 100%;
+    overflow: scroll;
+    border-bottom: 1px solid var(--color-white-secondary);
+    position: sticky;
+    top: 0;
+    background: var(--color-white-primary);
+}
+.project__navigation_items_wrapper {
+    display: flex;
+}
+.project__navigation_item {
+    padding: 8px 16px;
+}
+.project__navigation_item--active {
+    border-bottom: 2px solid #f9826c;
+    font-weight: 600;
+}
+
+.project__navigation_item a{
+    padding: 8px 0;
+    display: flex;
+    font-size: 14px;
+    text-decoration: none;
+}
+.projects__repo_count {
+margin-left: 4px;
+background-color: rgba(209, 213, 218, 0.5);
+color: var(--color-black-primary);
+font-size: 12px;
+font-weight: 500;
+display: grid;
+place-items: center;
+/* line-height: -12px; */
+padding: 0 6px;
+border-radius: 22px;
+}
+.project__navigation_page {
+padding: 16px 0;
+border-bottom: 1px solid #eaecef;
+}
+.project__repo_filter_wrapper {
+
+}
+.profile__set_status {
+margin-bottom: 16px;
+}
+.project__repo_filter_controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__search_repo {
+font-size: 1.4rem;
+padding: 0.5rem 1.2rem;
+}
+
+.project__filter_button {
+    padding: .5rem 1.6rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: .6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-white-secondary);
+    color:var(--color-black-secondary);
+}
+.project__filter_repo_type_wrapper {
+display: flex;
+}
+.project__filter_button--repo_type,
+.project__filter_button--repo_language {
+    font-style: normal;
+    font-weight: 500;
+}
+.project__filter_button_title {
+  opacity: .75;
+}
+.project__filter_button--repo_language {
+margin-left: .8rem;
+}
+.project__filter_button--create_repo {
+color: var(--color-white-primary);
+background-color: var(--color-green-primary);
+font-weight: 500;
+border: none;
+}
+
+.project__filter_button--create_repo img{
+    margin-right: .4rem
 }
