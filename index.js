@@ -13,6 +13,7 @@ hamburgerButton.addEventListener('click', function () {
 window.onLoad = handleLoadData()
 
 async function handleLoadData() {
+  //handing loading and error screen
   document.querySelector('.loader').classList.remove('hidden')
   document.querySelector('.error').classList.add('hidden')
   const content = {
@@ -81,9 +82,11 @@ async function handleLoadData() {
         document.querySelector('.loader').classList.add('hidden')
         document.querySelector('.error').classList.add('hidden')
 
+        //handles animation of the navbar
         await handleWindowScrollInit()
     } catch (error) {
         console.log({ error })
+        //when there is an error, stop loading and show te error page
         document.querySelector('.loader').classList.add('hidden')
         document.querySelector('.error').classList.remove('hidden')
     }
@@ -137,7 +140,6 @@ starred.innerHTML = starredRepositories.totalCount;
 repoCount.innerHTML = repositories.totalCount;
 
 let repos = repositories.nodes.map(node => {
-  // console.log(node)
   const {createdAt, description, forkCount, homepageUrl, id, isFork, licenseInfo, mirrorUrl, name, nameWithOwner, parent, primaryLanguage} = node
   let child =  ` <ul class="project__repo_list">
       <li class="project__repo">
@@ -203,6 +205,7 @@ let repos = repositories.nodes.map(node => {
 })
 }
 
+//listen to windows scroll and hides/show element based of set breakpoint
 function  handleWindowScrollInit () {
   window.addEventListener('scroll', function(e) {
     let profileImage = document.querySelector('.profile__image_user')
@@ -220,6 +223,8 @@ let repoLightBox = document.querySelector('.header__repo_management_popup')
 let profileButton = document.querySelector('.header__user_profile')
 let profileLightBox = document.querySelector('.header__user_profile_popup')
 
+//always listening to any click on the window. handles toggling of the
+//information drop down on the right hand side of the nav bar
 window.addEventListener('click', function(e){
   if(e.target.classList.contains('header__repo_management') && repoLightBox.classList.contains('hidden') && profileLightBox.classList.contains('hidden')){
     repoLightBox.classList.remove('hidden')
