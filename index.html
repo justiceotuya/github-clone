@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media='screen and (min-width: 768px)' href="index_bigscreen.css"/>
+
     <title>Document</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header--mobile hidden">
         <div class="header__top">
             <button class="header__hamburger">
                 <img src="assets/images/hamburger.svg" alt="toggle mobile navigation" />
@@ -46,7 +48,7 @@
                     </li>
                     <li class="header__links">
                         <a href="#">
-                            <img class="header__user_image" src="./assets/images/user.jpeg" alt="sign out">
+                            <img class="header__user_image" data-image="" src="" alt="sign out">
                             <span>justiceotuya</span>
                         </a>
                     </li>
@@ -62,13 +64,165 @@
         </div>
     </header>
 
-    <main class="container">
+    <header class="header header--desktop hidden">
+
+        <div class="header_search_wrapper">
+            <a href="/" class="header__logo">
+                <img src="assets/images/logo.svg" alt="github home" class="header__logo-image">
+            </a>
+
+            <input class="header__search" type="text" name="search" id="search" placeholder="Search">
+
+            <nav>
+                <ul class="header__links-container">
+                    <li class="header__links">
+                        <a href="#">Pull requests</a>
+                    </li>
+                    <li class="header__links">
+                        <a href="#">Issues</a>
+                    </li>
+                    <li class="header__links">
+                        <a href="#">Marketplace</a>
+                    </li>
+                    <li class="header__links">
+                        <a href="#">Explore</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__account_settings">
+            <a href="/" class="header__notifiction">
+                <img src="assets/images/bell.svg" alt="notifications" />
+            </a>
+            <div class="header__repo_management_container">
+                <button class="header__repo_management">
+                    <svg class="octicon octicon-plus" viewBox="0 0 16 16"
+                    version="1.1" width="16" height="16" aria-hidden="true" fill="currentColor"><path
+                    fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0
+                    010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0
+                    010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg>
+                    <span id="caret"></span>
+                </button>
+                <div class="header__repo_management_popup hidden">
+                    <ul>
+                        <li> <a href="#">New repository</a>  </li>
+                        <li><a href="#">Import repository</a></li>
+                        <li><a href="#">New gist</a></li>
+                        <li><a href="#">New project</a></li>
+                        <li><a href="#">New organization</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header__user_profile_container">
+            <button class="header__user_profile">
+                <img src="" data-image="" alt="user"  class="hidden">
+                <span id="caret"></span>
+            </button>
+            <div class="header__user_profile_popup hidden">
+                <p>Signed in as <span data-username="" ></span></p>
+                <div class="header__set_status_wrapper">
+                <button class="header__set_status">
+                    <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                        <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
+                1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0
+                000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0
+                011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0
+                1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0
+                111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984
+                1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946
+                0-1.652-.308-2.126-.63a3.32 3.32 0
+                01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75
+                0 01.183-1.044h.001z"></path>
+                    </svg>
+
+                    Set status
+                </button>
+            </div>
+
+                <ul>
+                    <li> <a href="#">Your profile</a>  </li>
+                    <li><a href="#">Your repositories</a></li>
+                    <li><a href="#">Your organizations</a></li>
+                    <li><a href="#">Your projects</a></li>
+                    <li><a href="#">Your stars</a></li>
+                    <li><a href="#">Your gists</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Feature Preview</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+    </header>
+
+
+
+
+
+    <nav class="projects__navigation_tabs--desktop hidden">
+        <div class="projects__nav__wrapper">
+            <div class="header__space_filler">
+                <div class="profile__image_user">
+                    <img src="" data-image="" alt="user" class="hidden">
+                    <span data-username=""></span>
+                </div>
+            </div>
+            <ul class="project__navigation_items_wrapper">
+                <li class="project__navigation_item">
+                    <a href="#">
+                        <img src="./assets/images/book.svg" alt="overview">
+                        Overview</a>
+                </li>
+                <li class="project__navigation_item project__navigation_item--active">
+                    <a href="#">
+                        <img src="./assets/images/repo-book.svg" alt="overview">
+                        Repositories <span class="projects__repo_count"></span>
+                    </a>
+                </li>
+                <li class="project__navigation_item">
+                    <a href="#">
+                        <img src="./assets/images/project.svg" alt="overview">
+                        Projects</a>
+                </li>
+                <li class="project__navigation_item">
+                    <a href="#">
+                        <img src="./assets/images/packages.svg" alt="overview">
+                        Packages</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+<section class="loader">
+    <p class="loader__text">Loading...</p>
+</section>
+
+<section class="error">
+    <p class="error__text">Something Went Wrong, Please Try Again</p>
+    <button class="error__button" >
+        Try Again
+    </button>
+</section>
+
+
+
+
+    <main class="container hidden">
         <section class="profile">
             <div class="profile__user_details_wrapper">
-                <img src="./assets/images/user.jpeg" alt="user" class="profile__image">
+                <img data-image="" src="" alt="user" class="profile__image" class="hidden">
                 <div class="profile__name_wrapper">
-                    <h1 class="profile__name">Justice Otuya</h1>
-                    <p class="profile__username">justiceotuya</p>
+                    <h1 class="profile__name"></h1>
+                    <p class="profile__username" data-username=""></p>
                 </div>
             </div>
             <button class="profile__set_status">
@@ -88,7 +242,7 @@
 
                 Set status
             </button>
-            <p class="profile__link">https://justiceotuya.github.io</p>
+            <p class="profile__link" data-user_link="" ></p>
             <button class="profile__edit_profile">
                 Edit profile
             </button>
@@ -97,27 +251,27 @@
                 <ul class="profile__contact">
                     <li>
                         <img src="./assets/images/mail.svg" alt="user's email">
-                        <a href="mailto:jotuya2@gmail.com">jotuya2@gmail.com</a>
+                        <a href="mailto:jotuya2@gmail.com" class ="profile__email"></a>
                     </li>
                     <li>
                         <img src="./assets/images/link.svg" alt="user's email">
-                        <a href="http://justiceotuya.github.io">https://justiceotuya.github.io</a>
+                        <a data-user_link="" href="http://justiceotuya.github.io"></a>
                     </li>
                 </ul>
 
                 <div class="profile__social_count">
                     <a href="#" class="profile__social_link">
                         <img src="./assets/images/people.svg" alt="followers">
-                        <span class="profile__number">20</span> followers
+                        <span class="profile__number" id="followers_count"></span> followers
                     </a>
                     <span class="profile__social_dot_seperator">.</span>
                     <a href="#" class="profile__social_link">
-                        <span class="profile__number">51</span> followers
+                        <span class="profile__number" id="following_count"></span> following
                     </a>
                     <span class="profile__social_dot_seperator">.</span>
                     <a href="#" class="profile__social_link">
                         <img src="./assets/images/star.svg" alt="Like">
-                        <span class="profile__number">27</span>
+                        <span class="profile__number" id="starred_count"></span>
                     </a>
                 </div>
             </div>
@@ -142,6 +296,7 @@
                 </ul>
             </nav>
 
+
             <section class="project__navigation_page">
                 <div class="project__repo_filter_wrapper">
                     <input type="text" class="profile__search_repo" placeholder="Find a repository...">
@@ -164,331 +319,7 @@
                     </div>
                 </div>
 
-                <div class="project__repo_list_wrapper">
-                    <ul class="project__repo_list">
-                        <li class="project__repo">
-                            <div class="project__repo_info">
-                                <h2>
-                                    <a href="#" class="project__repo_name">
-                                        input-form
-                                    </a>
-                                </h2>
-                                <p class="project__repo_forked_details">
-                                    Forked from <a
-                                    class="project__repo_forked_link"
-                                    href="#"> mykeels/spectranet-cli</a>
-                                </p>
-
-                                <p class="project__repo_description">
-                                    List of functions which you can use to replace moment.js + ESLint Plugin
-                                </p>
-
-                                <div class="project__repo_meta">
-                                    <span class="project__repo_language">
-                                        <span class="project_repo_language_color"></span>
-                                        <p class="project_repo_language_name">JavaScript</p>
-                                    </span>
-
-                                    <span class="project__repo_forked">
-                                        <img src="./assets/images/fork.svg" alt="number of times forked">
-                                        <p class="project__repo_forked_number">
-                                            265
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_license">
-                                        <img src="./assets/images/law.svg" alt="number of times forked">
-                                        <p class="project__repo_license_number">
-                                            MIT License
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_updated">
-                                        Updated on <span
-                                        class="project__repo_updated_date"> Apr
-                                            28</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <button class="project__repo_star_btn">
-                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
-                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
-01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
-4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
-01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
-01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
-01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
-2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
-01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
-2.694v.001z"></path>
-                                </svg>
-                                <span class="project__repo_star_btn_text"> Star</span>
-                            </button>
-                        </li>
-                    </ul>
-
-                    <ul class="project__repo_list">
-                        <li class="project__repo">
-                            <div class="project__repo_info">
-                                <h2>
-                                    <a href="#" class="project__repo_name">
-                                        input-form
-                                    </a>
-                                </h2>
-                                <p class="project__repo_forked_details">
-                                    Forked from <a
-                                    class="project__repo_forked_link"
-                                    href="#"> mykeels/spectranet-cli</a>
-                                </p>
-
-                                <p class="project__repo_description">
-                                    List of functions which you can use to replace moment.js + ESLint Plugin
-                                </p>
-
-                                <div class="project__repo_meta">
-                                    <span class="project__repo_language">
-                                        <span class="project_repo_language_color"></span>
-                                        <p class="project_repo_language_name">JavaScript</p>
-                                    </span>
-
-                                    <span class="project__repo_forked">
-                                        <img src="./assets/images/fork.svg" alt="number of times forked">
-                                        <p class="project__repo_forked_number">
-                                            265
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_license">
-                                        <img src="./assets/images/law.svg" alt="number of times forked">
-                                        <p class="project__repo_license_number">
-                                            MIT License
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_updated">
-                                        Updated on <span
-                                        class="project__repo_updated_date"> Apr
-                                            28</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <button class="project__repo_star_btn">
-                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
-                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
-01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
-4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
-01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
-01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
-01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
-2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
-01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
-2.694v.001z"></path>
-                                </svg>
-                                <span class="project__repo_star_btn_text"> Star</span>
-                            </button>
-                        </li>
-                    </ul>
-
-
-                    <ul class="project__repo_list">
-                        <li class="project__repo">
-                            <div class="project__repo_info">
-                                <h2>
-                                    <a href="#" class="project__repo_name">
-                                        input-form
-                                    </a>
-                                </h2>
-                                <p class="project__repo_forked_details">
-                                    Forked from <a
-                                    class="project__repo_forked_link"
-                                    href="#"> mykeels/spectranet-cli</a>
-                                </p>
-
-                                <p class="project__repo_description">
-                                    List of functions which you can use to replace moment.js + ESLint Plugin
-                                </p>
-
-                                <div class="project__repo_meta">
-                                    <span class="project__repo_language">
-                                        <span class="project_repo_language_color"></span>
-                                        <p class="project_repo_language_name">JavaScript</p>
-                                    </span>
-
-                                    <span class="project__repo_forked">
-                                        <img src="./assets/images/fork.svg" alt="number of times forked">
-                                        <p class="project__repo_forked_number">
-                                            265
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_license">
-                                        <img src="./assets/images/law.svg" alt="number of times forked">
-                                        <p class="project__repo_license_number">
-                                            MIT License
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_updated">
-                                        Updated on <span
-                                        class="project__repo_updated_date"> Apr
-                                            28</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <button class="project__repo_star_btn">
-                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
-                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
-01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
-4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
-01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
-01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
-01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
-2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
-01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
-2.694v.001z"></path>
-                                </svg>
-                                <span class="project__repo_star_btn_text"> Star</span>
-                            </button>
-                        </li>
-                    </ul>
-
-
-                    <ul class="project__repo_list">
-                        <li class="project__repo">
-                            <div class="project__repo_info">
-                                <h2>
-                                    <a href="#" class="project__repo_name">
-                                        input-form
-                                    </a>
-                                </h2>
-                                <p class="project__repo_forked_details">
-                                    Forked from <a
-                                    class="project__repo_forked_link"
-                                    href="#"> mykeels/spectranet-cli</a>
-                                </p>
-
-                                <p class="project__repo_description">
-                                    List of functions which you can use to replace moment.js + ESLint Plugin
-                                </p>
-
-                                <div class="project__repo_meta">
-                                    <span class="project__repo_language">
-                                        <span class="project_repo_language_color"></span>
-                                        <p class="project_repo_language_name">JavaScript</p>
-                                    </span>
-
-                                    <span class="project__repo_forked">
-                                        <img src="./assets/images/fork.svg" alt="number of times forked">
-                                        <p class="project__repo_forked_number">
-                                            265
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_license">
-                                        <img src="./assets/images/law.svg" alt="number of times forked">
-                                        <p class="project__repo_license_number">
-                                            MIT License
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_updated">
-                                        Updated on <span
-                                        class="project__repo_updated_date"> Apr
-                                            28</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <button class="project__repo_star_btn">
-                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
-                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
-01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
-4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
-01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
-01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
-01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
-2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
-01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
-2.694v.001z"></path>
-                                </svg>
-                                <span class="project__repo_star_btn_text"> Star</span>
-                            </button>
-                        </li>
-                    </ul>
-
-
-                    <ul class="project__repo_list">
-                        <li class="project__repo">
-                            <div class="project__repo_info">
-                                <h2>
-                                    <a href="#" class="project__repo_name">
-                                        input-form
-                                    </a>
-                                </h2>
-                                <p class="project__repo_forked_details">
-                                    Forked from <a
-                                    class="project__repo_forked_link"
-                                    href="#"> mykeels/spectranet-cli</a>
-                                </p>
-
-                                <p class="project__repo_description">
-                                    List of functions which you can use to replace moment.js + ESLint Plugin
-                                </p>
-
-                                <div class="project__repo_meta">
-                                    <span class="project__repo_language">
-                                        <span class="project_repo_language_color"></span>
-                                        <p class="project_repo_language_name">JavaScript</p>
-                                    </span>
-
-                                    <span class="project__repo_forked">
-                                        <img src="./assets/images/fork.svg" alt="number of times forked">
-                                        <p class="project__repo_forked_number">
-                                            265
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_license">
-                                        <img src="./assets/images/law.svg" alt="number of times forked">
-                                        <p class="project__repo_license_number">
-                                            MIT License
-                                        </p>
-                                    </span>
-
-                                    <span class="project__repo_updated">
-                                        Updated on <span
-                                        class="project__repo_updated_date"> Apr
-                                            28</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <button class="project__repo_star_btn">
-                                <svg class="svg-star" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#6a737d">
-                                    <path fill-rule="evenodd" d="M8 .25a.75.75 0
-01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719
-4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0
-01-1.088-.79l.72-4.194L.818 6.374a.75.75 0
-01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0
-01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084
-2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0
-01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8
-2.694v.001z"></path>
-                                </svg>
-                                <span class="project__repo_star_btn_text"> Star</span>
-                            </button>
-                        </li>
-                    </ul>
-
-                </div>
+                <div class="project__repo_list_wrapper"> </div>
 
             </section>
         </section>
