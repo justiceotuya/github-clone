@@ -15,59 +15,59 @@ window.onLoad = handleLoadData()
 async function handleLoadData() {
   document.querySelector('.loader').classList.remove('hidden')
   document.querySelector('.error').classList.add('hidden')
-    const content = {
-        "query": `{
-          viewer {
-          login
-          avatarUrl(size: 460)
-          bio
-          email
-          followers {
-            totalCount
-          }
-          following {
-            totalCount
-          }
-          starredRepositories {
-            totalCount
-          }
+  const content = {
+    "query": `{
+    viewer {
+      login
+      avatarUrl(size: 460)
+      bio
+      email
+      followers {
+        totalCount
+      }
+      following {
+        totalCount
+      }
+      starredRepositories {
+        totalCount
+      }
+      name
+      repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 20, affiliations: OWNER) {
+        totalCount
+        nodes {
+          createdAt
           name
-          repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 20, affiliations: OWNER) {
-            totalCount
-            nodes {
-              createdAt
-              name
-              description
-              forkCount
-              homepageUrl
-              id
-              licenseInfo {
-                name
-              }
-              isFork
-              primaryLanguage {
-                color
-                name
-              }
-              mirrorUrl
-              nameWithOwner
-              parent {
-                nameWithOwner
-                name
-                resourcePath
-                forkCount
-              }
-            }
+          description
+          forkCount
+          homepageUrl
+          id
+          licenseInfo {
+            name
+          }
+          isFork
+          primaryLanguage {
+            color
+            name
+          }
+          mirrorUrl
+          nameWithOwner
+          parent {
+            nameWithOwner
+            name
+            resourcePath
+            forkCount
           }
         }
-      }`
+      }
     }
+  }`
+}
 
     const options = {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': "Bearer a5cc2d19deeb8b3e3b37229deca2adad937d1df0"
+            'Authorization': "Bearer 88773cc15de3ced286c4737eb92211e082445044"
         },
         body: JSON.stringify(content)
     }
@@ -79,6 +79,8 @@ async function handleLoadData() {
         document.querySelector('.container').classList.remove('hidden')
         document.querySelector('.projects__navigation_tabs--desktop').classList.remove('hidden')
         document.querySelector('.loader').classList.add('hidden')
+        document.querySelector('.error').classList.add('hidden')
+
         await handleWindowScrollInit()
     } catch (error) {
         console.log({ error })
