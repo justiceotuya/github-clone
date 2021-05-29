@@ -1,132 +1,136 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/reset.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" media='screen and (min-width: 768px)' href="index_bigscreen.css"/>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" href="./assets/style/reset.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" media='screen and (min-width: 768px)' href="index_bigscreen.css" />
+        <!--endbuild-->
+        <title>Document</title>
+    </head>
 
-    <title>Document</title>
-</head>
+    <body>
+        <section id="profile__container" class="hidden">
+            <header class="header header--mobile    ">
+                <div class="header__top">
+                    <button class="header__hamburger">
+                        <img src="assets/images/hamburger.svg" alt="toggle mobile navigation" />
+                    </button>
+                    <a href="/" class="header__logo">
+                        <img src="assets/images/logo.svg" alt="github home" class="header__logo-image">
+                    </a>
 
-<body>
-    <header class="header header--mobile hidden">
-        <div class="header__top">
-            <button class="header__hamburger">
-                <img src="assets/images/hamburger.svg" alt="toggle mobile navigation" />
-            </button>
-            <a href="/" class="header__logo">
-                <img src="assets/images/logo.svg" alt="github home" class="header__logo-image">
-            </a>
-
-            <a href="/" class="header__notifiction">
-                <img src="assets/images/bell.svg" alt="notifications" />
-            </a>
-        </div>
-
-        <div class="header__bottom hidden">
-            <input class="header__search" type="text" name="search" id="search" placeholder="Search">
-
-            <nav>
-                <ul class="header__links-container">
-                    <li class="header__links">
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Pull requests</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Issues</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Marketplace</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Explore</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">
-                            <img class="header__user_image" data-image="" src="" alt="sign out">
-                            <span>justiceotuya</span>
-                        </a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">
-                            <img src="./assets/images/signout.svg" alt="sign out">
-                            <span>Sign out</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-
-    <header class="header header--desktop hidden">
-
-        <div class="header_search_wrapper">
-            <a href="/" class="header__logo">
-                <img src="assets/images/logo.svg" alt="github home" class="header__logo-image">
-            </a>
-
-            <input class="header__search" type="text" name="search" id="search" placeholder="Search">
-
-            <nav>
-                <ul class="header__links-container">
-                    <li class="header__links">
-                        <a href="#">Pull requests</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Issues</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Marketplace</a>
-                    </li>
-                    <li class="header__links">
-                        <a href="#">Explore</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header__account_settings">
-            <a href="/" class="header__notifiction">
-                <img src="assets/images/bell.svg" alt="notifications" />
-            </a>
-            <div class="header__repo_management_container">
-                <button class="header__repo_management">
-                    <svg class="octicon octicon-plus" viewBox="0 0 16 16"
-                    version="1.1" width="16" height="16" aria-hidden="true" fill="currentColor"><path
-                    fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0
-                    010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0
-                    010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg>
-                    <span id="caret"></span>
-                </button>
-                <div class="header__repo_management_popup hidden">
-                    <ul>
-                        <li> <a href="#">New repository</a>  </li>
-                        <li><a href="#">Import repository</a></li>
-                        <li><a href="#">New gist</a></li>
-                        <li><a href="#">New project</a></li>
-                        <li><a href="#">New organization</a></li>
-                    </ul>
+                    <a href="/" class="header__notifiction">
+                        <img src="assets/images/bell.svg" alt="notifications" />
+                    </a>
                 </div>
-            </div>
 
-            <div class="header__user_profile_container">
-            <button class="header__user_profile">
-                <img src="" data-image="" alt="user"  class="hidden">
-                <span id="caret"></span>
-            </button>
-            <div class="header__user_profile_popup hidden">
-                <p>Signed in as <span data-username="" ></span></p>
-                <div class="header__set_status_wrapper">
-                <button class="header__set_status">
-                    <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                        <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
+                <div class="header__bottom hidden">
+                    <input class="header__search" type="text" name="search" id="search" placeholder="Search">
+
+                    <nav>
+                        <ul class="header__links-container">
+                            <li class="header__links">
+                                <a href="#">Dashboard</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Pull requests</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Issues</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Marketplace</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Explore</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">
+                                    <img class="header__user_image" data-image="" src="" alt="sign out">
+                                    <span>justiceotuya</span>
+                                </a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">
+                                    <img src="./assets/images/signout.svg" alt="sign out">
+                                    <span>Sign out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+
+            <header class="header header--desktop hidden">
+
+                <div class="header_search_wrapper">
+                    <a href="/" class="header__logo">
+                        <img src="assets/images/logo.svg" alt="github home" class="header__logo-image">
+                    </a>
+
+                    <input class="header__search" type="text" name="search" id="search" placeholder="Search">
+
+                    <nav>
+                        <ul class="header__links-container">
+                            <li class="header__links">
+                                <a href="#">Pull requests</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Issues</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Marketplace</a>
+                            </li>
+                            <li class="header__links">
+                                <a href="#">Explore</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__account_settings">
+                    <a href="/" class="header__notifiction">
+                        <img src="assets/images/bell.svg" alt="notifications" />
+                    </a>
+                    <div class="header__repo_management_container">
+                        <button class="header__repo_management">
+                            <svg class="octicon octicon-plus" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                aria-hidden="true" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0
+                    010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0
+                    010-1.5h4.5v-4.5A.75.75 0 018 2z"></path>
+                            </svg>
+                            <span id="caret"></span>
+                        </button>
+                        <div class="header__repo_management_popup hidden">
+                            <ul>
+                                <li> <a href="#">New repository</a> </li>
+                                <li><a href="#">Import repository</a></li>
+                                <li><a href="#">New gist</a></li>
+                                <li><a href="#">New project</a></li>
+                                <li><a href="#">New organization</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header__user_profile_container">
+                        <button class="header__user_profile">
+                            <img src="" data-image="" alt="user" class="hidden">
+                            <span id="caret"></span>
+                        </button>
+                        <div class="header__user_profile_popup hidden">
+                            <p>Signed in as <span data-username=""></span></p>
+                            <div class="header__set_status_wrapper">
+                                <button class="header__set_status">
+                                    <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
                 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0
                 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0
                 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0
@@ -136,99 +140,85 @@
                 0-1.652-.308-2.126-.63a3.32 3.32 0
                 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75
                 0 01.183-1.044h.001z"></path>
-                    </svg>
+                                    </svg>
 
-                    Set status
-                </button>
-            </div>
+                                    Set status
+                                </button>
+                            </div>
 
-                <ul>
-                    <li> <a href="#">Your profile</a>  </li>
-                    <li><a href="#">Your repositories</a></li>
-                    <li><a href="#">Your organizations</a></li>
-                    <li><a href="#">Your projects</a></li>
-                    <li><a href="#">Your stars</a></li>
-                    <li><a href="#">Your gists</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Feature Preview</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
-        </div>
-
-    </header>
-
-
-
-
-
-    <nav class="projects__navigation_tabs--desktop hidden">
-        <div class="projects__nav__wrapper">
-            <div class="header__space_filler">
-                <div class="profile__image_user">
-                    <img src="" data-image="" alt="user" class="hidden">
-                    <span data-username=""></span>
+                            <ul>
+                                <li> <a href="#">Your profile</a> </li>
+                                <li><a href="#">Your repositories</a></li>
+                                <li><a href="#">Your organizations</a></li>
+                                <li><a href="#">Your projects</a></li>
+                                <li><a href="#">Your stars</a></li>
+                                <li><a href="#">Your gists</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Feature Preview</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <ul class="project__navigation_items_wrapper">
-                <li class="project__navigation_item">
-                    <a href="#">
-                        <img src="./assets/images/book.svg" alt="overview">
-                        Overview</a>
-                </li>
-                <li class="project__navigation_item project__navigation_item--active">
-                    <a href="#">
-                        <img src="./assets/images/repo-book.svg" alt="overview">
-                        Repositories <span class="projects__repo_count"></span>
-                    </a>
-                </li>
-                <li class="project__navigation_item">
-                    <a href="#">
-                        <img src="./assets/images/project.svg" alt="overview">
-                        Projects</a>
-                </li>
-                <li class="project__navigation_item">
-                    <a href="#">
-                        <img src="./assets/images/packages.svg" alt="overview">
-                        Packages</a>
-                </li>
-            </ul>
-        </div>
 
-    </nav>
-
-
-<section class="loader">
-    <p class="loader__text">Loading...</p>
-</section>
-
-<section class="error">
-    <p class="error__text">Something Went Wrong, Please Try Again</p>
-    <button class="error__button" >
-        Try Again
-    </button>
-</section>
+            </header>
 
 
 
 
-    <main class="container hidden">
-        <section class="profile">
-            <div class="profile__user_details_wrapper">
-                <img data-image="" src="" alt="user" class="profile__image" class="hidden">
-                <div class="profile__name_wrapper">
-                    <h1 class="profile__name"></h1>
-                    <p class="profile__username" data-username=""></p>
+
+            <nav class="projects__navigation_tabs--desktop">
+                <div class="projects__nav__wrapper">
+                    <div class="header__space_filler">
+                        <div class="profile__image_user">
+                            <img src="" data-image="" alt="user" class="hidden">
+                            <span data-username=""></span>
+                        </div>
+                    </div>
+                    <ul class="project__navigation_items_wrapper">
+                        <li class="project__navigation_item">
+                            <a href="#">
+                                <img src="./assets/images/book.svg" alt="overview">
+                                Overview</a>
+                        </li>
+                        <li class="project__navigation_item project__navigation_item--active">
+                            <a href="#">
+                                <img src="./assets/images/repo-book.svg" alt="overview">
+                                Repositories <span class="projects__repo_count"></span>
+                            </a>
+                        </li>
+                        <li class="project__navigation_item">
+                            <a href="#">
+                                <img src="./assets/images/project.svg" alt="overview">
+                                Projects</a>
+                        </li>
+                        <li class="project__navigation_item">
+                            <a href="#">
+                                <img src="./assets/images/packages.svg" alt="overview">
+                                Packages</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <button class="profile__set_status">
-                <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
-                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                    <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
+
+            </nav>
+
+
+            <main class="container">
+                <section class="profile">
+                    <div class="profile__user_details_wrapper">
+                        <img data-image="" src="" alt="user" class="profile__image" class="hidden">
+                        <div class="profile__name_wrapper">
+                            <h1 class="profile__name"></h1>
+                            <p class="profile__username" data-username=""></p>
+                        </div>
+                    </div>
+                    <button class="profile__set_status">
+                        <svg class="profile__svg-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0
             1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0
             000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0
             011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0
@@ -238,93 +228,127 @@
             0-1.652-.308-2.126-.63a3.32 3.32 0
             01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75
             0 01.183-1.044h.001z"></path>
-                </svg>
+                        </svg>
 
-                Set status
-            </button>
-            <p class="profile__link" data-user_link="" ></p>
-            <button class="profile__edit_profile">
-                Edit profile
-            </button>
+                        Set status
+                    </button>
+                    <p class="profile__link" data-user_link=""></p>
+                    <button class="profile__edit_profile">
+                        Edit profile
+                    </button>
 
-            <div class="profile__contact_wrapper">
-                <ul class="profile__contact">
-                    <li>
-                        <img src="./assets/images/mail.svg" alt="user's email">
-                        <a href="mailto:jotuya2@gmail.com" class ="profile__email"></a>
-                    </li>
-                    <li>
-                        <img src="./assets/images/link.svg" alt="user's email">
-                        <a data-user_link="" href="http://justiceotuya.github.io"></a>
-                    </li>
-                </ul>
+                    <div class="profile__contact_wrapper">
+                        <ul class="profile__contact">
+                            <li>
+                                <img src="./assets/images/mail.svg" alt="user's email">
+                                <a href="mailto:jotuya2@gmail.com" class="profile__email"></a>
+                            </li>
+                            <li>
+                                <img src="./assets/images/link.svg" alt="user's email">
+                                <a data-user_link="" href="http://justiceotuya.github.io"></a>
+                            </li>
+                        </ul>
 
-                <div class="profile__social_count">
-                    <a href="#" class="profile__social_link">
-                        <img src="./assets/images/people.svg" alt="followers">
-                        <span class="profile__number" id="followers_count"></span> followers
-                    </a>
-                    <span class="profile__social_dot_seperator">.</span>
-                    <a href="#" class="profile__social_link">
-                        <span class="profile__number" id="following_count"></span> following
-                    </a>
-                    <span class="profile__social_dot_seperator">.</span>
-                    <a href="#" class="profile__social_link">
-                        <img src="./assets/images/star.svg" alt="Like">
-                        <span class="profile__number" id="starred_count"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
+                        <div class="profile__social_count">
+                            <a href="#" class="profile__social_link">
+                                <img src="./assets/images/people.svg" alt="followers">
+                                <span class="profile__number" id="followers_count"></span> followers
+                            </a>
+                            <span class="profile__social_dot_seperator">.</span>
+                            <a href="#" class="profile__social_link">
+                                <span class="profile__number" id="following_count"></span> following
+                            </a>
+                            <span class="profile__social_dot_seperator">.</span>
+                            <a href="#" class="profile__social_link">
+                                <img src="./assets/images/star.svg" alt="Like">
+                                <span class="profile__number" id="starred_count"></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="projects">
-            <nav class="projects__navigation_tabs">
-                <ul class="project__navigation_items_wrapper">
-                    <li class="project__navigation_item">
-                        <a href="#">Overview</a>
-                    </li>
-                    <li class="project__navigation_item project__navigation_item--active">
-                        <a href="#">Repositories <span class="projects__repo_count">76</span>
-                        </a>
-                    </li>
-                    <li class="project__navigation_item">
-                        <a href="#">Projects</a>
-                    </li>
-                    <li class="project__navigation_item">
-                        <a href="#">Packages</a>
-                    </li>
-                </ul>
-            </nav>
+                <section class="projects">
+                    <nav class="projects__navigation_tabs">
+                        <ul class="project__navigation_items_wrapper">
+                            <li class="project__navigation_item">
+                                <a href="#">Overview</a>
+                            </li>
+                            <li class="project__navigation_item project__navigation_item--active">
+                                <a href="#">Repositories <span id="projects__repo_count"></sec>
+                                </a>
+                            </li>
+                            <li class="project__navigation_item">
+                                <a href="#">Projects</a>
+                            </li>
+                            <li class="project__navigation_item">
+                                <a href="#">Packages</a>
+                            </li>
+                        </ul>
+                    </nav>
 
 
-            <section class="project__navigation_page">
-                <div class="project__repo_filter_wrapper">
-                    <input type="text" class="profile__search_repo" placeholder="Find a repository...">
-                    <div class="project__repo_filter_controls">
-                        <div class="project__filter_repo_type_wrapper">
-                            <button class="project__filter_button project__filter_button--repo_type">
-                                <span class="project__filter_button_title">Type:</span> <span data-menu="">All</span>
-                                <span id="caret"></span>
-                            </button>
-                            <button class="project__filter_button project__filter_button--repo_language">
-                                <span class="project__filter_button_title"> Language</span>: <span
-                                    data-menu="">All</span>
-                                <span id="caret"></span>
-                            </button>
+                    <section class="project__navigation_page">
+                        <div class="project__repo_filter_wrapper">
+                            <input type="text" class="profile__search_repo" placeholder="Find a repository...">
+                            <div class="project__repo_filter_controls">
+                                <div class="project__filter_repo_type_wrapper">
+                                    <button class="project__filter_button project__filter_button--repo_type">
+                                        <span class="project__filter_button_title">Type:</span> <span
+                                            data-menu="">All</span>
+                                        <span id="caret"></span>
+                                    </button>
+                                    <button class="project__filter_button project__filter_button--repo_language">
+                                        <span class="project__filter_button_title"> Language</span>: <span
+                                            data-menu="">All</span>
+                                        <span id="caret"></span>
+                                    </button>
+                                </div>
+
+                                <button class="project__filter_button project__filter_button--create_repo">
+                                    <img src="assets/images/repo.svg"> New
+                                </button>
+                            </div>
                         </div>
 
-                        <button class="project__filter_button project__filter_button--create_repo">
-                            <img src="assets/images/repo.svg"> New
-                        </button>
-                    </div>
-                </div>
+                        <div class="project__repo_list_wrapper"> </div>
 
-                <div class="project__repo_list_wrapper"> </div>
-
-            </section>
+                    </section>
+                </section>
+            </main>
         </section>
-    </main>
-    <script src="./index.js"></script>
-</body>
+
+        <section class="search">
+            <form class="search__form" onsubmit="handleClickSearchButton(event)">
+                <input type="text" class="search__input" placeholder="Search a User's account...">
+                <button class="search__button">
+                    Search
+                </button>
+            </form>
+            <!-- <p class="search__loader_text hidden">Loading...</p> -->
+        </section>
+
+
+        <button type="button" class="search__button_toggler hidden" onclick="handleShowSearchForm()">
+            <img src="./assets/images/bell.svg" alt="search toggler" class="search__toggler__image">
+        </button>
+
+
+        <section class="error hidden">
+            <p class="error__text">Something Went Wrong, Please Try Again</p>
+            <button class="error__button">
+                Try Again
+            </button>
+        </section>
+
+        <section class="empty hidden">
+            <p class="error__text">There is no user with that username please retry</p>
+            <button class="error__button">
+                Try Again
+            </button>
+        </section>
+        <!--build:js js/script.min.js-->
+        <script src="./index.js"></script>
+        <!--endbuild-->
+    </body>
 
 </html>

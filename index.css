@@ -36,6 +36,7 @@
 
 .container {
     padding: 0 16px;
+
 }
 
 /**** HEADER CSS ****/
@@ -130,7 +131,7 @@
     padding-left: 3px;
 }
 
-.loader, .error {
+.loader, .error,.empty,.search {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -152,7 +153,6 @@ button.error__button {
 }
 .profile__user_details_wrapper{
 display: flex;
-margin-bottom: 24px;
 padding-left: 8px;
 align-items: center;
 }
@@ -163,6 +163,9 @@ margin-right: 1.6rem;
 }
 .profile__name_wrapper{
     padding-left: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
 }
 .profile__name{
     font-size: 2.6rem;
@@ -302,7 +305,15 @@ position: relative;
     border-bottom: 2px solid #f9826c;
     font-weight: 600;
 }
-
+.search {
+            background: transparent;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+}
 .project__navigation_item a{
     padding: 8px 0;
     display: flex;
@@ -336,7 +347,10 @@ margin-bottom: 16px;
     justify-content: space-between;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--color-white-secondary);
+}
 
+.blur {
+    filter:blur(10px)
 }
 
 .profile__search_repo {
@@ -384,6 +398,91 @@ color: var(--color-white-primary);
 background-color: var(--color-green-primary);
 font-weight: 500;
 border: none;
+}
+
+.search__form{
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    height: 50px;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: var(--color-white-primary);
+        border-radius: .6rem;
+}
+
+.search__input{
+    padding: .5rem 1.6rem;
+    flex: calc(100% - 150px);
+        font-size: 1.4rem;
+    /* padding: 0.5rem 1.2rem; */
+    outline: none;
+        display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: .6rem;
+    /* font-size: 1.2rem; */
+    border: 1px solid var(--color-white-secondary);
+    color: var(--color-black-secondary);
+
+}
+
+.search__button {
+    flex: 50px;
+    text-align: center;
+    color: var(--color-white-primary);
+    background-color: var(--color-green-primary);
+    font-weight: 500;
+    border: none;
+        align-items: center;
+    border-radius: .6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform .2s ease-in-out;
+}
+
+.search__button:active{
+ transform: translateY(2px);
+}
+
+.search__button:disabled {
+background-color: var(--color-yellow-secondary);
+cursor: not-allowed;
+}
+
+.search__button_toggler{
+      color: var(--color-white-primary);
+    background-color: var(--color-green-primary);
+    border: none;
+align-items: center;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ border-radius: 100%;
+ padding: 15px;
+ position:fixed;
+ bottom: 30px;
+ right: 30px;
+    transition: transform .2s ease-in-out, box-shadow .3s;
+  transform: translateY(0);
+z-index: 6;
+}
+.search__toggler__image {
+    height: 30px;
+    width:30px;
+}
+
+.search__button_toggler:active {
+transform: translateY(3px);
+box-shadow:none;
+}
+.search__button_toggler:hover {
+  box-shadow: 0 2px 5px var(--color-black-secondary);
+}
+
+.search__loader_text{
+margin-top: 50px;
 }
 
 .project__filter_button--create_repo img{

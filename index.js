@@ -10,15 +10,31 @@ hamburgerButton.addEventListener('click', function () {
     }
 });
 
-window.onLoad = handleLoadData()
+// window.onLoad = handleLoadData()
 
-async function handleLoadData() {
+function handleClickSearchButton(event) {
+  event.preventDefault();
+  // get form value
+  let value = document.querySelector('.search__input').value
+  if(value !== "") {
+    handleLoadData(value)
+  }
+}
+
+
+async function handleLoadData(value) {
+  //handles animation of the navbar
+  handleWindowScrollInit()
+
   //handing loading and error screen
-  document.querySelector('.loader').classList.remove('hidden')
+document.querySelector('.search__button').textContent = 'Loading'
+document.querySelector('.search__button').disabled = true
   document.querySelector('.error').classList.add('hidden')
+  document.querySelector('.empty').classList.add('hidden')
+
   const content = {
     "query": `{
-    viewer {
+    user(login: "${value}") {
       login
       avatarUrl(size: 460)
       bio
@@ -33,10 +49,11 @@ async function handleLoadData() {
         totalCount
       }
       name
-      repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 20, affiliations: OWNER) {
+       repositories( first: 20, orderBy:{field: PUSHED_AT, direction: DESC}) {
         totalCount
         nodes {
           createdAt
+          updatedAt
           name
           description
           forkCount
@@ -68,26 +85,40 @@ async function handleLoadData() {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': "Bearer 88773cc15de3ced286c4737eb92211e082445044"
+            'Authorization': "Bearer 2401cfce6234a9587e5878a3a163f1666b5d4e73"
         },
         body: JSON.stringify(content)
     }
 
-    try {
-        const request = await fetch('https://api.github.com/graphql', options)
-        const response = await request.json()
-        await handleHandleDisplayUsersProfile(response.data.viewer)
-        document.querySelector('.container').classList.remove('hidden')
-        document.querySelector('.projects__navigation_tabs--desktop').classList.remove('hidden')
-        document.querySelector('.loader').classList.add('hidden')
-        document.querySelector('.error').classList.add('hidden')
+  try {
 
-        //handles animation of the navbar
-        await handleWindowScrollInit()
+
+
+        const request = await fetch('https://api.github.com/graphql', options)
+    const response = await request.json()
+    document.querySelector('.search__button').textContent = 'Search'
+    document.querySelector('.search__button').disabled = false
+  document.querySelector('.search').classList.add('hidden')
+  document.querySelector('.search__button_toggler').classList.remove('hidden')
+    if (!response.data.user) {
+  document.querySelector('.empty').classList.remove('blur')
+         document.querySelector('#profile__container').classList.add('hidden')
+        document.querySelector('.empty').classList.remove('hidden')
+      } else {
+            await handleHandleDisplayUsersProfile(response.data.user)
+
+        document.querySelector('#profile__container').classList.remove('hidden','blur')
+//  document.querySelector('#profile__container').remove('blur')
+
+      }
+
+
+
     } catch (error) {
         console.log({ error })
         //when there is an error, stop loading and show te error page
-        document.querySelector('.loader').classList.add('hidden')
+        document.querySelector('.error').classList.remove('blur')
+        document.querySelector('.search__loader_text').classList.add('hidden')
         document.querySelector('.error').classList.remove('hidden')
     }
 }
@@ -137,10 +168,12 @@ userEmail.innerHTML = email;
 followersCount.innerHTML = followers.totalCount;
 followingCount.innerHTML = following.totalCount;
 starred.innerHTML = starredRepositories.totalCount;
-repoCount.innerHTML = repositories.totalCount;
+  repoCount.textContent = repositories.totalCount;
+  //delete child of node if it is present
+   repoWrapper.innerHTML = '';
 
 let repos = repositories.nodes.map(node => {
-  const {createdAt, description, forkCount, homepageUrl, id, isFork, licenseInfo, mirrorUrl, name, nameWithOwner, parent, primaryLanguage} = node
+  const {updatedAt, description, forkCount, homepageUrl, id, isFork, licenseInfo, mirrorUrl, name, nameWithOwner, parent, primaryLanguage} = node
   let child =  ` <ul class="project__repo_list">
       <li class="project__repo">
           <div class="project__repo_info">
@@ -179,7 +212,7 @@ let repos = repositories.nodes.map(node => {
 
                   <span class="project__repo_updated">
                       Updated on <span
-                      class="project__repo_updated_date"> ${handleFormatDate(createdAt)}</span>
+                      class="project__repo_updated_date"> ${handleFormatDate(updatedAt)}</span>
                   </span>
               </div>
 
@@ -201,20 +234,23 @@ let repos = repositories.nodes.map(node => {
           </button>
       </li>
   </ul>`
+
+
   repoWrapper.insertAdjacentHTML('beforeend', child)
 })
 }
 
 //listen to windows scroll and hides/show element based of set breakpoint
-function  handleWindowScrollInit () {
-  window.addEventListener('scroll', function(e) {
-    let profileImage = document.querySelector('.profile__image_user')
-   if(this.scrollY > 364) {
+function handleWindowScrollInit() {
+  window.addEventListener('scroll', function (e) {
+      let profileImage = document.querySelector('.profile__image_user')
+   if(this.scrollY > 318) {
 profileImage.classList.add("profile__image_user__show")
    }else {
     profileImage.classList.remove("profile__image_user__show")
    }
-})
+  })
+
 }
 
 // handle show lightbox list when the add repo item is clicked
@@ -239,3 +275,10 @@ window.addEventListener('click', function(e){
     profileLightBox.classList.add('hidden')
   }
 })
+
+function handleShowSearchForm() {
+  document.querySelector('.search').classList.toggle('hidden')
+  document.querySelector('#profile__container').classList.toggle('blur')
+  document.querySelector('.error').classList.toggle('blur')
+  document.querySelector('.empty').classList.toggle('blur')
+}
