@@ -85,10 +85,10 @@ document.querySelector('.search__button').disabled = true
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': "Bearer 2401cfce6234a9587e5878a3a163f1666b5d4e73"
+            'Authorization': "Bearer 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"
         },
         body: JSON.stringify(content)
-    }
+    }  
 
   try {
 
@@ -117,9 +117,8 @@ document.querySelector('.search__button').disabled = true
     } catch (error) {
         console.log({ error })
         //when there is an error, stop loading and show te error page
-        document.querySelector('.error').classList.remove('blur')
+        document.querySelector('.error').classList.remove('blur',"hidden")
         document.querySelector('.search__loader_text').classList.add('hidden')
-        document.querySelector('.error').classList.remove('hidden')
     }
 }
 
@@ -269,7 +268,8 @@ window.addEventListener('click', function(e){
     profileLightBox.classList.remove('hidden')
   }
   else if(e.target.classList.contains('error__button')){
-    handleLoadData();
+    document.querySelector('.search').classList.toggle('hidden')
+     document.querySelector('.error').classList.toggle('blur')
   }  else{
     repoLightBox.classList.add('hidden')
     profileLightBox.classList.add('hidden')
